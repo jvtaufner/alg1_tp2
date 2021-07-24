@@ -18,6 +18,7 @@ class Graph{
 
         Graph(int numberOfNodes, int numberOfEdges);
         void addEdge(int node1, int node2);
+        void printGraph();
         
 };
 
