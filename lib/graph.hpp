@@ -13,13 +13,17 @@ class Graph{
         int numberOfNodes;
         int numberOfEdges;
         vector<vector<int>> adjList;
-
+        
     public:
 
         Graph(int numberOfNodes, int numberOfEdges);
+        //Graph();
         void addEdge(int node1, int node2);
+        vector<int> getNeighbors(int node);
+        int getNumberOfNodes();
+        int getNumberOfEdges();
         void printGraph();
-        
+     
 };
 
 

@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include "./lib/graph.hpp"
+#include "./lib/graph_utils.hpp"
 
 using namespace std;
 
@@ -24,4 +25,6 @@ int main(){
 
     Graph graph = readInput();
     graph.printGraph();
+    Graph reversedGraph = GraphUtils::reverseGraph(graph);
+    reversedGraph.printGraph();
 }

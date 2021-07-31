@@ -1,6 +1,11 @@
 #include "../lib/graph.hpp"
 
 
+/*Graph::Graph(){
+    this->adjList
+
+}*/
+
 Graph::Graph(int numberOfNodes, int numberOfEdges){
 
     this->numberOfNodes = numberOfNodes;
@@ -20,4 +25,16 @@ void Graph::printGraph(){
             cout << v << endl;
         }
     }
+}
+
+vector<int> Graph::getNeighbors(int node){
+    return adjList[node];
+}
+
+int Graph::getNumberOfNodes(){
+    return numberOfNodes;
+}
+
+int Graph::getNumberOfEdges(){
+    return numberOfEdges;
 }
