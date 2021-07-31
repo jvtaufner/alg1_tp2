@@ -24,7 +24,17 @@ Graph readInput(){
 int main(){
 
     Graph graph = readInput();
-    graph.printGraph();
+    //graph.printGraph();
     Graph reversedGraph = GraphUtils::reverseGraph(graph);
-    reversedGraph.printGraph();
+    GraphUtils::DFS(graph, 10);
+    //reversedGraph.printGraph();
+    /*for(int i=0; i<graph.getNumberOfNodes(); i++){
+        cout << graph.getVisited(i+1) << " ";
+    }
+    cout << "\n\n\n";
+    
+        for(int i=0; i<graph.getNumberOfNodes(); i++){
+        cout << graph.getVisited(i+1) << " ";
+    }*/
+    
 }

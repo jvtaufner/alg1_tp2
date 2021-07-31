@@ -9,11 +9,11 @@
 using namespace std;
 
 class GraphUtils{
-    
+
     public:
 
     static Graph reverseGraph(Graph graph);
-    //static void DFS(Graph graph);
+    static void DFS(Graph &graph, int node);
     //static Graph kosaraju(Graph graph);
     //static int edgesToMakeSCC(Graph graph);
 
