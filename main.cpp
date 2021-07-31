@@ -26,15 +26,23 @@ int main(){
     Graph graph = readInput();
     //graph.printGraph();
     Graph reversedGraph = GraphUtils::reverseGraph(graph);
-    GraphUtils::DFS(graph, 10);
+    stack<int> teste;
+    GraphUtils::DFS(graph, 1, teste);
+    
     //reversedGraph.printGraph();
     /*for(int i=0; i<graph.getNumberOfNodes(); i++){
         cout << graph.getVisited(i+1) << " ";
     }
     cout << "\n\n\n";
     
+    
         for(int i=0; i<graph.getNumberOfNodes(); i++){
         cout << graph.getVisited(i+1) << " ";
+    }
+    cout << "\n\n\n";
+    while (!teste.empty()) {
+        cout << ' ' << teste.top();
+        teste.pop();
     }*/
     
 }

@@ -22,3 +22,16 @@ void GraphUtils::DFS(Graph &graph, int node){
         }
     }
 }
+
+void GraphUtils::DFS(Graph &graph, int node, stack<int> &dfsFinishOrder){
+
+    graph.setVisited(node);
+
+    for(int v: graph.getNeighbors(node)){
+        if(!graph.getVisited(v)){
+            DFS(graph, v, dfsFinishOrder);
+        }
+    }
+    dfsFinishOrder.push(node);
+}
+
