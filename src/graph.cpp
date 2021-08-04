@@ -8,15 +8,23 @@ Graph::Graph(int numberOfNodes, int numberOfEdges){
     this->visited.resize(numberOfNodes, false);
 }
 
+Graph::Graph(int numberOfNodes){
+
+    this->numberOfNodes = numberOfNodes;
+    this->adjList.resize(numberOfNodes, vector<int>(0));
+    this->visited.resize(numberOfNodes, false);
+}
+
+
 void Graph::addEdge(int node1, int node2){
-    //número dos nós começa em 1
+    
     adjList[node1-1].push_back(node2);
 }
 
 void Graph::printGraph(){
     for(int i=0; i<numberOfNodes; i++){
         cout << "Lista de " << i+1 << endl;
-        for(auto v : adjList[i]){
+        for(int v : adjList[i]){
             cout << v << endl;
         }
     }
@@ -40,4 +48,8 @@ int Graph::getNumberOfNodes(){
 
 int Graph::getNumberOfEdges(){
     return numberOfEdges;
+}
+
+void Graph::setNumberOfEdges(int numberOfEdges){
+    this->numberOfEdges = numberOfEdges;
 }

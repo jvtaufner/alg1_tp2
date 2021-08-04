@@ -6,6 +6,8 @@
 #include <set>
 #include <unordered_set>
 #include <stack>
+#include <utility>
+
 
 using namespace std;
 
@@ -16,8 +18,10 @@ class GraphUtils{
     static Graph reverseGraph(Graph graph);
     static void DFS(Graph &graph, int node);
     static void DFS(Graph &graph, int node, stack<int> &dfsFinishOrder);
-    //static Graph kosaraju(Graph graph);
-    //static int edgesToMakeSCC(Graph graph);
+    static void DFS(Graph &graph, int node, int counter, vector<int> &newID);
+    static Graph createSimplerGraph(Graph graph, vector<int> newID, int newSize);
+    static Graph kosaraju(Graph graph);
+    static int edgesToMakeSCC(Graph graph);
 
 };
 
