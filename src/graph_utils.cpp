@@ -88,9 +88,6 @@ Graph GraphUtils::kosaraju(Graph graph){
         }
         processedNodes.pop();
     }
-    for(int i=0; i<graph.getNumberOfNodes(); i++){
-        cout << "nó " << i+1 << " tem novo indice " << newID[i] << "\n";
-    }
 
     return createSimplerGraph(graph, newID, counter);   
 }
