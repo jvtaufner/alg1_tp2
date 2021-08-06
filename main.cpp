@@ -24,6 +24,6 @@ Graph readInput(){
 int main(){
 
     Graph graph = readInput();
-    cout << GraphUtils::edgesToMakeSCC(graph);
+    cout << GraphUtils::edgesToMakeSCC(graph) << "\n";
 
 }
