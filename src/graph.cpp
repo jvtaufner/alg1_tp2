@@ -21,14 +21,6 @@ void Graph::addEdge(int node1, int node2){
     adjList[node1-1].push_back(node2);
 }
 
-void Graph::printGraph(){
-    for(int i=0; i<numberOfNodes; i++){
-        cout << "Lista de " << i+1 << endl;
-        for(int v : adjList[i]){
-            cout << v << endl;
-        }
-    }
-}
 
 vector<int> Graph::getNeighbors(int node){
     return adjList[node-1];

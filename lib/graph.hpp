@@ -26,7 +26,6 @@ class Graph{
         int getNumberOfNodes();
         int getNumberOfEdges();
         void setNumberOfEdges(int numberOfEdges);
-        void printGraph();
      
 };
 
