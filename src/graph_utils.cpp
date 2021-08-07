@@ -12,16 +12,7 @@ Graph GraphUtils::reverseGraph(Graph graph){
     return reversedGraph;
 }
 
-void GraphUtils::DFS(Graph &graph, int node){
-    
-    graph.setVisited(node);
 
-    for(int v : graph.getNeighbors(node)){
-        if(!graph.getVisited(v)){
-            DFS(graph, v);
-        }
-    }
-}
 
 void GraphUtils::DFS(Graph &graph, int node, stack<int> &dfsFinishOrder){
 

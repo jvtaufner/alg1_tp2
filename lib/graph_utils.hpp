@@ -16,7 +16,6 @@ class GraphUtils{
     public:
 
     static Graph reverseGraph(Graph graph);
-    static void DFS(Graph &graph, int node);
     static void DFS(Graph &graph, int node, stack<int> &dfsFinishOrder);
     static void DFS(Graph &graph, int node, int counter, vector<int> &newID);
     static Graph createSimplerGraph(Graph graph, vector<int> newID, int newSize);
